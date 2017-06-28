@@ -39,6 +39,15 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" Buffer faster buffer switching
+set wildchar=<Tab> wildmenu wildmode=full
+nnoremap <C-Tab> <C-^>
+
+" leader d to delete without replacing copy register etc
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+vnoremap <leader>p "_dP
+
 " Language specific settigs
 augroup configgroup
     autocmd!
