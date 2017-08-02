@@ -1,3 +1,7 @@
+
+execute pathogen#infect()
+call pathogen#helptags()
+
 " Tab settings
 set expandtab
 set shiftwidth=4
@@ -22,8 +26,6 @@ let mapleader=","
 " NERDTree
 autocmd vimenter * NERDTree   "Open NERDTree automatically when starting vim
 autocmd vimenter * wincmd p   " ... but focus the file, not the tree
-execute pathogen#infect()
-call pathogen#helptags()
 map <C-n> :NERDTreeToggle<CR>
 " toggle NERDTree
 map <F2> :NERDTreeToggle<CR>
