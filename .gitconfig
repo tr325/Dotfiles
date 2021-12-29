@@ -1,0 +1,30 @@
+[user]
+    email = tomrenner@hey.com
+    name = Tom Renner
+[push]
+    default = simple
+[pull]
+    ff = true
+[merge]
+    ff = false
+[alias]
+    lg = log --graph --oneline --decorate --all
+    rename = branch -m
+    diff-branch = diff develop...
+    typo = commit --amend
+    new-branch = checkout -b
+    add = add -N
+    stat = show --pretty=medium -s
+    check = checkout
+
+###### Useful commands to remember:
+# git branch -f <branch-name> <new-tip-commit> 
+#     -- moves a local branch ref to point to a new commit
+#
+# git rebase --onto <place-to-put-it> <last-change-that-should-NOT-move> <change to move>
+#     -- rebases a sequence of commits onto another location
+#     -- eg. rebasing part of a branch (when cherrypicking isn't correct)
+#
+# git bisect --first-parent
+#     -- only checks the "main" parent of the current branch when bisecting.
+#     -- probably easiest way to debug main branches (eg. develop, main, master)
